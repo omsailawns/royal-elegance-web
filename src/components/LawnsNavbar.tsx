@@ -31,7 +31,9 @@ const LawnsNavbar = () => {
             {navLinks.map((link) => (
               <Link key={link.path} to={link.path}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  location.pathname === link.path ? "gold-gradient text-primary-foreground shadow-md" : "text-foreground/70 hover:text-foreground hover:bg-muted"
+                  (link as any).isSwitch
+                    ? "border border-gold/40 text-gold hover:bg-gold/10 ml-2"
+                    : location.pathname === link.path ? "gold-gradient text-primary-foreground shadow-md" : "text-foreground/70 hover:text-foreground hover:bg-muted"
                 } ${link.path === "/lawns/contact" ? "gold-gradient text-primary-foreground glow-hover ml-2" : ""}`}>
                 {link.label}
               </Link>
