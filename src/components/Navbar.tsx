@@ -4,14 +4,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { path: "/", label: "Home" },
-  { path: "/about", label: "About" },
-  { path: "/services", label: "Services" },
-  { path: "/gallery", label: "Gallery" },
-  { path: "/features", label: "Features" },
-  { path: "/testimonials", label: "Testimonials" },
-  { path: "/location", label: "Location" },
-  { path: "/contact", label: "Book Now" },
+  { path: "/banquet", label: "Home" },
+  { path: "/banquet/about", label: "About" },
+  { path: "/banquet/services", label: "Services" },
+  { path: "/banquet/gallery", label: "Gallery" },
+  { path: "/banquet/features", label: "Features" },
+  { path: "/banquet/testimonials", label: "Testimonials" },
+  { path: "/banquet/location", label: "Location" },
+  { path: "/banquet/contact", label: "Book Now" },
 ];
 
 const Navbar = () => {
@@ -25,7 +25,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center gap-2">
             <span className="font-display text-2xl font-bold gold-text">OM SAI</span>
             <span className="hidden sm:block text-xs text-muted-foreground tracking-widest uppercase">
-              Banquet & Lawns
+              Banquet
             </span>
           </Link>
 
@@ -39,7 +39,7 @@ const Navbar = () => {
                   location.pathname === link.path
                     ? "gold-gradient text-primary-foreground shadow-md"
                     : "text-foreground/70 hover:text-foreground hover:bg-muted"
-                } ${link.path === "/contact" ? "gold-gradient text-primary-foreground glow-hover ml-2" : ""}`}
+                } ${link.path === "/banquet/contact" ? "gold-gradient text-primary-foreground glow-hover ml-2" : ""}`}
               >
                 {link.label}
               </Link>
