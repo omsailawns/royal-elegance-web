@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import LawnsNavbar from "@/components/LawnsNavbar";
+import LawnsFooter from "@/components/LawnsFooter";
 import Landing from "./pages/Landing";
 import Index from "./pages/Index";
 import About from "./pages/About";
@@ -15,16 +17,31 @@ import Features from "./pages/Features";
 import Location from "./pages/Location";
 import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
+import LawnsHome from "./pages/lawns/LawnsHome";
+import LawnsAbout from "./pages/lawns/LawnsAbout";
+import LawnsServices from "./pages/lawns/LawnsServices";
+import LawnsGallery from "./pages/lawns/LawnsGallery";
+import LawnsFeatures from "./pages/lawns/LawnsFeatures";
+import LawnsLocation from "./pages/lawns/LawnsLocation";
+import LawnsTestimonials from "./pages/lawns/LawnsTestimonials";
+import LawnsContact from "./pages/lawns/LawnsContact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-// Layout with navbar & footer for banquet pages
 const BanquetLayout = ({ children }: { children: React.ReactNode }) => (
   <>
     <Navbar />
     <AnimatePresence mode="wait">{children}</AnimatePresence>
     <Footer />
+  </>
+);
+
+const LawnsLayout = ({ children }: { children: React.ReactNode }) => (
+  <>
+    <LawnsNavbar />
+    <AnimatePresence mode="wait">{children}</AnimatePresence>
+    <LawnsFooter />
   </>
 );
 
@@ -35,10 +52,9 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          {/* Landing splash — no navbar/footer */}
           <Route path="/" element={<Landing />} />
 
-          {/* Banquet sub-pages */}
+          {/* Banquet */}
           <Route path="/banquet" element={<BanquetLayout><Index /></BanquetLayout>} />
           <Route path="/banquet/about" element={<BanquetLayout><About /></BanquetLayout>} />
           <Route path="/banquet/services" element={<BanquetLayout><Services /></BanquetLayout>} />
@@ -48,8 +64,15 @@ const App = () => (
           <Route path="/banquet/testimonials" element={<BanquetLayout><Testimonials /></BanquetLayout>} />
           <Route path="/banquet/contact" element={<BanquetLayout><Contact /></BanquetLayout>} />
 
-          {/* Lawns placeholder */}
-          <Route path="/lawns" element={<Landing />} />
+          {/* Lawns */}
+          <Route path="/lawns" element={<LawnsLayout><LawnsHome /></LawnsLayout>} />
+          <Route path="/lawns/about" element={<LawnsLayout><LawnsAbout /></LawnsLayout>} />
+          <Route path="/lawns/services" element={<LawnsLayout><LawnsServices /></LawnsLayout>} />
+          <Route path="/lawns/gallery" element={<LawnsLayout><LawnsGallery /></LawnsLayout>} />
+          <Route path="/lawns/features" element={<LawnsLayout><LawnsFeatures /></LawnsLayout>} />
+          <Route path="/lawns/location" element={<LawnsLayout><LawnsLocation /></LawnsLayout>} />
+          <Route path="/lawns/testimonials" element={<LawnsLayout><LawnsTestimonials /></LawnsLayout>} />
+          <Route path="/lawns/contact" element={<LawnsLayout><LawnsContact /></LawnsLayout>} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
