@@ -12,6 +12,7 @@ const navLinks = [
   { path: "/banquet/testimonials", label: "Testimonials" },
   { path: "/banquet/location", label: "Location" },
   { path: "/banquet/contact", label: "Book Now" },
+  { path: "/lawns", label: "🌿 Lawns", isSwitch: true },
 ];
 
 const Navbar = () => {
