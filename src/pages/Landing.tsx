@@ -103,7 +103,7 @@ const Landing = () => {
                 Beautiful open-air lawn with lush greens, fairy lights & scenic landscape
               </p>
               <span className="inline-flex items-center gap-2 text-gold-light text-sm font-medium group-hover:gap-3 transition-all duration-300">
-                Coming Soon
+                Explore <ArrowRight size={16} />
               </span>
             </Link>
           </motion.div>
