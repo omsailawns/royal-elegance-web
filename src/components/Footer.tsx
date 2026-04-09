@@ -17,7 +17,7 @@ const Footer = () => (
             {["About", "Services", "Gallery", "Contact"].map((link) => (
               <Link
                 key={link}
-                to={`/${link.toLowerCase()}`}
+                to={`/banquet/${link.toLowerCase()}`}
                 className="block text-cream/60 hover:text-gold-light transition-colors text-sm"
               >
                 {link}

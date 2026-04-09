@@ -69,13 +69,13 @@ const Index = () => {
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
               <Link
-                to="/contact"
+                to="/banquet/contact"
                 className="gold-gradient px-8 py-4 rounded-xl font-semibold text-primary-foreground glow-hover flex items-center gap-2 text-lg shadow-lg"
               >
                 Book Now <ArrowRight size={20} />
               </Link>
               <Link
-                to="/gallery"
+                to="/banquet/gallery"
                 className="px-8 py-4 rounded-xl font-semibold border-2 border-gold-light/40 text-cream hover:bg-cream/10 transition-all duration-300 text-lg"
               >
                 Explore Gallery
