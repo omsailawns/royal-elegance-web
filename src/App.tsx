@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Landing from "./pages/Landing";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -18,27 +19,40 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Layout with navbar & footer for banquet pages
+const BanquetLayout = ({ children }: { children: React.ReactNode }) => (
+  <>
+    <Navbar />
+    <AnimatePresence mode="wait">{children}</AnimatePresence>
+    <Footer />
+  </>
+);
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Navbar />
-        <AnimatePresence mode="wait">
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/features" element={<Features />} />
-            <Route path="/location" element={<Location />} />
-            <Route path="/testimonials" element={<Testimonials />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </AnimatePresence>
-        <Footer />
+        <Routes>
+          {/* Landing splash — no navbar/footer */}
+          <Route path="/" element={<Landing />} />
+
+          {/* Banquet sub-pages */}
+          <Route path="/banquet" element={<BanquetLayout><Index /></BanquetLayout>} />
+          <Route path="/banquet/about" element={<BanquetLayout><About /></BanquetLayout>} />
+          <Route path="/banquet/services" element={<BanquetLayout><Services /></BanquetLayout>} />
+          <Route path="/banquet/gallery" element={<BanquetLayout><Gallery /></BanquetLayout>} />
+          <Route path="/banquet/features" element={<BanquetLayout><Features /></BanquetLayout>} />
+          <Route path="/banquet/location" element={<BanquetLayout><Location /></BanquetLayout>} />
+          <Route path="/banquet/testimonials" element={<BanquetLayout><Testimonials /></BanquetLayout>} />
+          <Route path="/banquet/contact" element={<BanquetLayout><Contact /></BanquetLayout>} />
+
+          {/* Lawns placeholder */}
+          <Route path="/lawns" element={<Landing />} />
+
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
