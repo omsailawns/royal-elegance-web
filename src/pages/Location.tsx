@@ -3,9 +3,9 @@ import PageWrapper from "@/components/PageWrapper";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const contactDetails = [
-  { icon: <MapPin size={24} />, title: "Address", info: "123 Royal Avenue, Near City Center, Mumbai, Maharashtra 400001" },
-  { icon: <Phone size={24} />, title: "Phone", info: "+91 98765 43210" },
-  { icon: <Mail size={24} />, title: "Email", info: "info@omsaibanquet.com" },
+  { icon: <MapPin size={24} />, title: "Address", info: "Om Sai Banquet Hall ,Andobawadi,Pahunewadi, Baramati-Phaltan Road,Baramati, Pune, Maharashtra" },
+  { icon: <Phone size={24} />, title: "Phone", info: "+91 98226 58766" },
+  { icon: <Mail size={24} />, title: "Email", info: "omsailawns@gmail.com" },
   { icon: <Clock size={24} />, title: "Hours", info: "Mon-Sun: 9:00 AM - 11:00 PM" },
 ];
 
@@ -34,15 +34,15 @@ const Location = () => (
             className="rounded-2xl overflow-hidden shadow-xl h-[400px] lg:h-full min-h-[400px]"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1640000000000!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="OM SAI Banquet Location"
-            />
+  src="https://www.google.com/maps?q=Om%20Sai%20Banquet%20Hall%20Baramati&output=embed"
+  width="100%"
+  height="500"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  className="rounded-3xl shadow-2xl"
+></iframe>
           </motion.div>
 
           {/* Contact Details */}

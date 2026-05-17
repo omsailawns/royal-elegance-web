@@ -1,20 +1,39 @@
 import PageWrapper from "@/components/PageWrapper";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { motion } from "framer-motion";
-import { Users, Car, TreePine, UtensilsCrossed, Lightbulb, Music, Droplets, Shield } from "lucide-react";
+import { Users, Car,Wand2, TreePine, UtensilsCrossed, Lightbulb, Music, Droplets, Shield, Speaker } from "lucide-react";
 
 const counters = [
-  { end: 800, suffix: "+", label: "Guest Capacity", icon: <Users size={36} /> },
-  { end: 150, suffix: "+", label: "Parking Spaces", icon: <Car size={36} /> },
+  { end: 2000, suffix: "+", label: "Guest Capacity", icon: <Users size={36} /> },
+  { end: 400, suffix: "+", label: "Parking Spaces", icon: <Car size={36} /> },
   { end: 30, suffix: "+", label: "Garden Themes", icon: <TreePine size={36} /> },
-  { end: 400, suffix: "+", label: "Events Hosted", icon: <UtensilsCrossed size={36} /> },
+  { end: 2000, suffix: "+", label: "Events Hosted", icon: <UtensilsCrossed size={36} /> },
 ];
 
 const extras = [
-  { icon: <Lightbulb size={24} />, title: "Fairy Light Canopy", desc: "Magical overhead lighting across the entire lawn" },
-  { icon: <Music size={24} />, title: "Open-Air Stage", desc: "Dedicated stage with sound for live performances" },
-  { icon: <Droplets size={24} />, title: "Sprinkler System", desc: "Well-maintained lush green grass year-round" },
-  { icon: <Shield size={24} />, title: "Weather Backup", desc: "Waterproof tent covers for rain contingency" },
+  {
+    icon: <Lightbulb size={24} />,
+    title: "Ambient Aesthetic Lighting",
+    desc: "Luxury fairy lights and elegant ambient lighting across the entire lawn",
+  },
+
+  {
+    icon: <Music size={24} />,
+    title: "Open-Air Stage",
+    desc: "Spacious stage setup with professional sound for live performances",
+  },
+
+  {
+    icon: <Wand2 size={24} />,
+    title: "Custom Décor",
+    desc: "Royal themed décor arrangements designed for unforgettable celebrations",
+  },
+
+  {
+    icon: <Speaker size={24} />,
+    title: "Sound System",
+    desc: "High-quality DJ and surround sound setup for every event",
+  },
 ];
 
 const LawnsFeatures = () => (

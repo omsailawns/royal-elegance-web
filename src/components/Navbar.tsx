@@ -9,7 +9,7 @@ const navLinks = [
   { path: "/banquet/services", label: "Services" },
   { path: "/banquet/gallery", label: "Gallery" },
   { path: "/banquet/features", label: "Features" },
-  { path: "/banquet/testimonials", label: "Testimonials" },
+  { path: "/banquet/testimonials", label: "Event Stories" },
   { path: "/banquet/location", label: "Location" },
   { path: "/banquet/contact", label: "Book Now" },
   { path: "/lawns", label: "🌿 Lawns", isSwitch: true },
@@ -37,8 +37,8 @@ const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  (link as any).isSwitch
-                    ? "border border-gold/40 text-gold hover:bg-gold/10 ml-2"
+                  location.pathname === link.path
+  ? "gold-gradient text-primary-foreground"
                     : location.pathname === link.path
                       ? "gold-gradient text-primary-foreground shadow-md"
                       : "text-foreground/70 hover:text-foreground hover:bg-muted"

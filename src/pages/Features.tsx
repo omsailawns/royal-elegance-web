@@ -1,17 +1,18 @@
 import PageWrapper from "@/components/PageWrapper";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { motion } from "framer-motion";
-import { Users, Car, Palette, UtensilsCrossed, Wifi, Music, Camera, Shield } from "lucide-react";
+import { Users, Car, Palette, UtensilsCrossed, Sparkles, Music, Camera, Shield, } from "lucide-react";
 
 const counters = [
-  { end: 1000, suffix: "+", label: "Guest Capacity", icon: <Users size={36} /> },
+  { end: 1100, suffix: "+", label: "Guest Capacity", icon: <Users size={36} /> },
   { end: 200, suffix: "+", label: "Parking Spaces", icon: <Car size={36} /> },
   { end: 50, suffix: "+", label: "Décor Themes", icon: <Palette size={36} /> },
   { end: 500, suffix: "+", label: "Events Hosted", icon: <UtensilsCrossed size={36} /> },
 ];
 
 const extras = [
-  { icon: <Wifi size={24} />, title: "High-Speed WiFi", desc: "Seamless connectivity for all your guests" },
+  { icon: <Sparkles size={24} />, title: "Custom Décor", desc: "Luxury wedding décor themes designed specially for your celebration" },
+
   { icon: <Music size={24} />, title: "Sound System", desc: "Professional audio for every occasion" },
   { icon: <Camera size={24} />, title: "Photo Points", desc: "Instagram-worthy backdrops included" },
   { icon: <Shield size={24} />, title: "24/7 Security", desc: "Round-the-clock safety for peace of mind" },

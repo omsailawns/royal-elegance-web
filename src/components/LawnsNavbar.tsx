@@ -3,13 +3,19 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
-const navLinks = [
+interface NavLink {
+  path: string;
+  label: string;
+  isSwitch?: boolean;
+}
+
+const navLinks: NavLink[] = [
   { path: "/lawns", label: "Home" },
   { path: "/lawns/about", label: "About" },
   { path: "/lawns/services", label: "Services" },
   { path: "/lawns/gallery", label: "Gallery" },
   { path: "/lawns/features", label: "Features" },
-  { path: "/lawns/testimonials", label: "Testimonials" },
+  { path: "/lawns/testimonials", label: "Event Stories" },
   { path: "/lawns/location", label: "Location" },
   { path: "/lawns/contact", label: "Book Now" },
   { path: "/banquet", label: "🏛 Banquet", isSwitch: true },
@@ -24,6 +30,7 @@ const LawnsNavbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2">
+            
             <span className="font-display text-2xl font-bold gold-text">OM SAI</span>
             <span className="hidden sm:block text-xs text-muted-foreground tracking-widest uppercase">Lawns</span>
           </Link>
@@ -31,8 +38,8 @@ const LawnsNavbar = () => {
             {navLinks.map((link) => (
               <Link key={link.path} to={link.path}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  (link as any).isSwitch
-                    ? "border border-gold/40 text-gold hover:bg-gold/10 ml-2"
+                  location.pathname === link.path
+  ? "gold-gradient text-primary-foreground"
                     : location.pathname === link.path ? "gold-gradient text-primary-foreground shadow-md" : "text-foreground/70 hover:text-foreground hover:bg-muted"
                 } ${link.path === "/lawns/contact" ? "gold-gradient text-primary-foreground glow-hover ml-2" : ""}`}>
                 {link.label}

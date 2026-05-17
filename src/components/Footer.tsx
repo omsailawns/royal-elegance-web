@@ -28,15 +28,13 @@ const Footer = () => (
         <div>
           <h4 className="font-display text-lg font-semibold mb-4 text-gold-light">Contact</h4>
           <div className="space-y-2 text-cream/60 text-sm">
-            <p>📍 123 Royal Avenue, City</p>
-            <p>📞 +91 98765 43210</p>
-            <p>✉️ info@omsaibanquet.com</p>
+           <p>📍 Om Sai Lawns, Baramati, Pune,Maharashtra</p>
+            <p>📞 +91 98226 58766</p>
+            <p>✉️ omsailawns@gmail.com</p>
           </div>
         </div>
       </div>
-      <div className="border-t border-cream/10 mt-12 pt-8 text-center text-cream/40 text-sm flex items-center justify-center gap-1">
-        Made with <Heart size={14} className="text-gold" /> OM SAI BANQUET & LAWNS © 2026
-      </div>
+      
     </div>
   </footer>
 );
