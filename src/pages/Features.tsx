@@ -30,7 +30,7 @@ const Features = () => (
         >
           <span className="text-gold tracking-[0.2em] uppercase text-sm font-medium">Our Features</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 mb-4">
-            Why Choose <span className="gold-text">Us</span>
+             Why People <span className="gold-text">Love Us</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             World-class facilities and amenities that set us apart.
