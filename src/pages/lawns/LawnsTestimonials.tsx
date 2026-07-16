@@ -1,37 +1,18 @@
 import { motion } from "framer-motion";
 import PageWrapper from "@/components/PageWrapper";
-import {
-  PlayCircle,
-  CalendarDays,
-} from "lucide-react";
 
 const videos = [
   {
-    title: "Royal Wedding Highlights",
-    date: "February 2026",
-    video:
-      "https://www.w3schools.com/html/mov_bbb.mp4",
+    video: "https://www.youtube.com/embed/fMnR9GvCqR4",
   },
-
   {
-    title: "Luxury Reception Night",
-    date: "January 2026",
-    video:
-      "https://www.w3schools.com/html/movie.mp4",
+    video: "https://www.youtube.com/embed/VIDEO_ID_2",
   },
-
   {
-    title: "Engagement Ceremony",
-    date: "December 2025",
-    video:
-      "https://www.w3schools.com/html/mov_bbb.mp4",
+    video: "https://www.youtube.com/embed/VIDEO_ID_3",
   },
-
   {
-    title: "Corporate Annual Event",
-    date: "November 2025",
-    video:
-      "https://www.w3schools.com/html/movie.mp4",
+    video: "https://www.youtube.com/embed/VIDEO_ID_4",
   },
 ];
 
@@ -39,7 +20,6 @@ const PastEvents = () => {
   return (
     <PageWrapper>
       <section className="py-20 px-4">
-
         <div className="max-w-7xl mx-auto">
 
           {/* Heading */}
@@ -58,16 +38,13 @@ const PastEvents = () => {
             </h2>
 
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Relive the unforgettable celebrations hosted
-              at OM SAI Banquet & Lawns.
+              Relive the unforgettable celebrations hosted at OM SAI Banquet & Lawns.
             </p>
           </motion.div>
 
           {/* Video Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
             {videos.map((video, index) => (
-
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 40 }}
@@ -76,42 +53,17 @@ const PastEvents = () => {
                 transition={{ delay: index * 0.1 }}
                 className="glass-card overflow-hidden rounded-3xl"
               >
-
-                {/* Video */}
-                <div className="relative overflow-hidden">
-
-                  <video
-                    controls
-                    className="w-full h-[350px] object-cover"
-                  >
-                    <source src={video.video} type="video/mp4" />
-                  </video>
-
-                  <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full flex items-center gap-2 text-white text-sm">
-                    <PlayCircle size={16} />
-                    Event Video
-                  </div>
-
+                <div className="relative overflow-hidden rounded-3xl">
+                  <iframe
+                    src={video.video}
+                    title={`Event Video ${index + 1}`}
+                    className="w-full h-[350px]"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe>
                 </div>
-
-                {/* Content */}
-                <div className="p-6">
-
-                  <h3 className="font-display text-2xl font-bold mb-3">
-                    {video.title}
-                  </h3>
-
-                  <div className="flex items-center gap-2 text-muted-foreground text-sm">
-                    <CalendarDays size={16} />
-                    {video.date}
-                  </div>
-
-                </div>
-
               </motion.div>
-
             ))}
-
           </div>
 
         </div>
