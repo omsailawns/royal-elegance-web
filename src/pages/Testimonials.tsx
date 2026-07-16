@@ -65,9 +65,7 @@ const PastEvents = () => {
 
           {/* Video Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
             {videos.map((video, index) => (
-
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 40 }}
@@ -76,23 +74,18 @@ const PastEvents = () => {
                 transition={{ delay: index * 0.1 }}
                 className="glass-card overflow-hidden rounded-3xl"
               >
-
                 {/* Video */}
                 <div className="relative overflow-hidden">
-
                   <video
                     controls
                     className="w-full h-[350px] object-cover"
                   >
                     <source src={video.video} type="video/mp4" />
                   </video>
-
-                  <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full flex items-center gap-2 text-white text-sm">
-                    <PlayCircle size={16} />
-                    Event Video
-                  </div>
-
                 </div>
+              </motion.div>
+            ))}
+          </div>
 
                 {/* Content */}
                 <div className="p-6">
