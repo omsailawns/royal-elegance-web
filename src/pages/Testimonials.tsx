@@ -10,7 +10,7 @@ const videos = [
     title: "Royal Wedding Highlights",
     date: "February 2026",
     video:
-      "https://www.w3schools.com/html/mov_bbb.mp4",
+      "https://youtu.be/fMnR9GvCqR4?si=01VA09u3Jm-E7Q0z",
   },
 
   {
