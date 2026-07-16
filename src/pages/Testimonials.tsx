@@ -1,9 +1,6 @@
 import { motion } from "framer-motion";
 import PageWrapper from "@/components/PageWrapper";
-import {
-  PlayCircle,
-  CalendarDays,
-} from "lucide-react";
+
 
 const videos = [
   {
