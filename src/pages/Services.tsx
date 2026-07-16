@@ -8,25 +8,25 @@ const services = [
     icon: <Heart size={40} />,
     title: "Wedding Events",
     desc: "Create your fairy-tale wedding with our stunning décor, expert planning, and luxurious amenities. Every detail crafted to perfection.",
-    features: ["Custom Décor", "Bridal Suite", "Valet Parking", "Live Music Setup"],
+    features: ["Custom Décor", "Live Music Setup"],
   },
   {
     icon: <GlassWater size={40} />,
     title: "Reception",
     desc: "Host an unforgettable reception with elegant ambiance, gourmet catering, and seamless event coordination.",
-    features: ["Gourmet Menu", "Bar Setup", "DJ & Sound", "Photo Booth"],
+    features: ["Gourmet Menu", "DJ & Sound", "Luxury Stage Decorationh"],
   },
   {
     icon: <Cake size={40} />,
     title: "Birthday Parties",
     desc: "Celebrate milestones in grand style with themed decorations, entertainment, and a dedicated party crew.",
-    features: ["Theme Setup", "Balloon Décor", "Kids Zone", "Custom Cake"],
+    features: ["Theme Setup", "Balloon Décor","Pre-Wedding Functions", "Custom Cake"],
   },
   {
     icon: <Briefcase size={40} />,
     title: "Corporate Events",
     desc: "Professional conference facilities with modern AV equipment, breakout rooms, and executive catering services.",
-    features: ["AV Equipment", "Stage Setup", "Breakout Rooms", "High-Speed WiFi"],
+    features: ["AV Equipment", "Stage Setup", "Seminars", "Product Launches"],
   },
 ];
 
