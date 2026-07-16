@@ -7,29 +7,29 @@ import {
 
 const videos = [
   {
-    title: "Royal Wedding Highlights",
-    date: "February 2026",
+    title: "",
+    date: "",
     video:
       "https://youtu.be/fMnR9GvCqR4?si=01VA09u3Jm-E7Q0z",
   },
 
   {
-    title: "Luxury Reception Night",
-    date: "January 2026",
+    title: "",
+    date: "",
     video:
       "https://www.w3schools.com/html/movie.mp4",
   },
 
   {
-    title: "Engagement Ceremony",
-    date: "December 2025",
+    title: "",
+    date: "",
     video:
       "https://www.w3schools.com/html/mov_bbb.mp4",
   },
 
   {
-    title: "Corporate Annual Event",
-    date: "November 2025",
+    title: "",
+    date: "",
     video:
       "https://www.w3schools.com/html/movie.mp4",
   },
