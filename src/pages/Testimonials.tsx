@@ -6,7 +6,7 @@ const videos = [
     video: "https://www.youtube.com/embed/fMnR9GvCqR4",
   },
   {
-    video: "https://www.youtube.com/embed/VIDEO_ID_2",
+    video: "https://youtube.com/shorts/lFnIQ7Ycw9A?si=VskOjGRCLIlLCL8g",
   },
   {
     video: "https://www.youtube.com/embed/VIDEO_ID_3",
