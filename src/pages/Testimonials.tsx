@@ -4,34 +4,18 @@ import PageWrapper from "@/components/PageWrapper";
 
 const videos = [
   {
-    title: "",
-    date: "",
-    video:
-      "https://youtu.be/fMnR9GvCqR4?si=01VA09u3Jm-E7Q0z",
+    video: "https://www.youtube.com/embed/fMnR9GvCqR4",
   },
-
   {
-    title: "",
-    date: "",
-    video:
-      "https://www.w3schools.com/html/movie.mp4",
+    video: "https://www.youtube.com/embed/VIDEO_ID_2",
   },
-
   {
-    title: "",
-    date: "",
-    video:
-      "https://www.w3schools.com/html/mov_bbb.mp4",
+    video: "https://www.youtube.com/embed/VIDEO_ID_3",
   },
-
   {
-    title: "",
-    date: "",
-    video:
-      "https://www.w3schools.com/html/movie.mp4",
+    video: "https://www.youtube.com/embed/VIDEO_ID_4",
   },
 ];
-
 const PastEvents = () => {
   return (
     <PageWrapper>
@@ -73,12 +57,13 @@ const PastEvents = () => {
               >
                 {/* Video */}
                 <div className="relative overflow-hidden">
-                  <video
-                    controls
-                    className="w-full h-[350px] object-cover"
-                  >
-                    <source src={video.video} type="video/mp4" />
-                  </video>
+                 <iframe
+                  src={video.video}
+                  title={`Event Video ${index + 1}`}
+                  className="w-full h-[350px]"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
                 </div>
               </motion.div>
             ))}
