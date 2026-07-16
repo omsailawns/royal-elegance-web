@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import PageWrapper from "@/components/PageWrapper";
 
-
 const videos = [
   {
     video: "https://www.youtube.com/embed/fMnR9GvCqR4",
@@ -16,11 +15,11 @@ const videos = [
     video: "https://www.youtube.com/embed/VIDEO_ID_4",
   },
 ];
+
 const PastEvents = () => {
   return (
     <PageWrapper>
       <section className="py-20 px-4">
-
         <div className="max-w-7xl mx-auto">
 
           {/* Heading */}
@@ -39,8 +38,7 @@ const PastEvents = () => {
             </h2>
 
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Relive the unforgettable celebrations hosted
-              at OM SAI Banquet & Lawns.
+              Relive the unforgettable celebrations hosted at OM SAI Banquet & Lawns.
             </p>
           </motion.div>
 
@@ -55,38 +53,17 @@ const PastEvents = () => {
                 transition={{ delay: index * 0.1 }}
                 className="glass-card overflow-hidden rounded-3xl"
               >
-                {/* Video */}
-                <div className="relative overflow-hidden">
-                 <iframe
-                  src={video.video}
-                  title={`Event Video ${index + 1}`}
-                  className="w-full h-[350px]"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
+                <div className="relative overflow-hidden rounded-3xl">
+                  <iframe
+                    src={video.video}
+                    title={`Event Video ${index + 1}`}
+                    className="w-full h-[350px]"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe>
                 </div>
               </motion.div>
             ))}
-          </div>
-
-                {/* Content */}
-                <div className="p-6">
-
-                  <h3 className="font-display text-2xl font-bold mb-3">
-                    {video.title}
-                  </h3>
-
-                  <div className="flex items-center gap-2 text-muted-foreground text-sm">
-                    <CalendarDays size={16} />
-                    {video.date}
-                  </div>
-
-                </div>
-
-              </motion.div>
-
-            ))}
-
           </div>
 
         </div>
