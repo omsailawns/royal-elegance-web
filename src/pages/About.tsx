@@ -9,7 +9,7 @@ const features = [
   {
     icon: <Building2 size={32} />,
     title: "Spacious Banquet Hall",
-    desc: "Our grand banquet hall can accommodate up to 1000 guests with elegant interiors, crystal chandeliers, and world-class amenities.",
+    desc: "Our grand banquet hall can accommodate 1000+ guests with elegant interiors, crystal chandeliers, and world-class amenities.",
   },
   {
     icon: <TreePine size={32} />,
