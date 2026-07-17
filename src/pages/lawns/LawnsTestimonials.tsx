@@ -3,16 +3,16 @@ import PageWrapper from "@/components/PageWrapper";
 
 const videos = [
   {
-    video: "https://www.youtube.com/embed/fMnR9GvCqR4",
+    video: "/videos/lawnevent1.mp4",
   },
   {
-    video: "https://www.youtube.com/embed/VIDEO_ID_2",
+    video: "/videos/lawnevent2.mp4",
   },
   {
-    video: "https://www.youtube.com/embed/VIDEO_ID_3",
+    video: "/videos/lawnevent3.mp4",
   },
   {
-    video: "https://www.youtube.com/embed/VIDEO_ID_4",
+    video: "/videos/lawnevent4.mp4",
   },
 ];
 
@@ -38,7 +38,8 @@ const PastEvents = () => {
             </h2>
 
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Relive the unforgettable celebrations hosted at OM SAI Banquet & Lawns.
+              Relive the unforgettable celebrations hosted at OM SAI Banquet &
+              Lawns.
             </p>
           </motion.div>
 
@@ -54,13 +55,18 @@ const PastEvents = () => {
                 className="glass-card overflow-hidden rounded-3xl"
               >
                 <div className="relative overflow-hidden rounded-3xl">
-                  <iframe
-                    src={video.video}
-                    title={`Event Video ${index + 1}`}
-                    className="w-full h-[350px]"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  ></iframe>
+
+                  <video
+                    className="w-full h-[350px] object-cover"
+                    controls
+                    controlsList="nodownload"
+                    preload="metadata"
+                    playsInline
+                  >
+                    <source src={video.video} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+
                 </div>
               </motion.div>
             ))}
