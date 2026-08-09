@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import PageWrapper from "@/components/PageWrapper";
 import { X } from "lucide-react";
 
-import g1 from "@/assets/mainhall.jpeg";
+import g1 from "@/assets/main hall.jpeg";
 import g2 from "@/assets/main dinning8.jpeg";
 import g3 from "@/assets/main hall 6.jpeg";
-import g4 from "@/assets/dinning 6.jpeg";
+import g4 from "@/assets/dinning6.jpeg";
 import g5 from "@/assets/hall5.jpeg";
 import g6 from "@/assets/diining2.jpeg";
 
