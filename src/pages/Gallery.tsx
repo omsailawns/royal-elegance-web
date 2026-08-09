@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import PageWrapper from "@/components/PageWrapper";
 import { X } from "lucide-react";
 
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
-import g5 from "@/assets/gallery-5.jpg";
-import g6 from "@/assets/gallery-6.jpg";
+import g1 from "@/assets/mainhall.jpeg";
+import g2 from "@/assets/main dinning8.jpeg";
+import g3 from "@/assets/main hall 6.jpeg";
+import g4 from "@/assets/dinning 6.jpeg";
+import g5 from "@/assets/hall5.jpeg";
+import g6 from "@/assets/diining2.jpeg";
 
 const images = [
   { src: g1, title: "Wedding Ceremony", span: "row-span-2" },
