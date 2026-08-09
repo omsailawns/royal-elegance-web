@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import PageWrapper from "@/components/PageWrapper";
 import TiltCard from "@/components/TiltCard";
-import heroImage from "@/assets/hero-banquet.jpg";
-import lawnImage from "@/assets/about-lawn.jpg";
+import heroImage from "@/assets/hall4.jpg";
+import lawnImage from "@/assets/outside.jpg";
 import { Building2, TreePine, PartyPopper } from "lucide-react";
 
 const features = [
